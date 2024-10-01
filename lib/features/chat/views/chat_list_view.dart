@@ -1,3 +1,5 @@
+// ignore_for_file: use_super_parameters
+
 import 'package:flutter/material.dart';
 
 class ChatListView extends StatelessWidget {
@@ -8,7 +10,7 @@ class ChatListView extends StatelessWidget {
     // Dummy data for chat list
     final List<Map<String, String>> chats = [
       {
-        'name': 'Omar Ahemd',
+        'name': 'Omar Ahmed',
         'lastMessage': '2024/9/30 04:14',
         'status': 'online'
       },
@@ -80,6 +82,39 @@ class ChatListView extends StatelessWidget {
         backgroundColor: Colors.green[700],
         child: const Icon(Icons.chat, color: Colors.white),
       ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.white,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(
+              icon: const Icon(Icons.camera_alt),
+              onPressed: () {
+                // TODO: Implement camera functionality
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.chat),
+              onPressed: () {
+                // Already on chat screen
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.circle_outlined),
+              onPressed: () {
+                // TODO: Implement status functionality
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.call),
+              onPressed: () {
+                // TODO: Implement calls functionality
+              },
+            ),
+          ],
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
     );
   }
 }
