@@ -28,7 +28,7 @@ class ChatListView extends StatelessWidget {
             title: Text(chats[index]['name']!),
             subtitle: Text(chats[index]['lastMessage']!),
             onTap: () {
-              // TODO: Navigate to individual chat screen
+              /* TODO: Navigate to individual chat screen*/
             },
           );
         },
