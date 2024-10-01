@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'assets/whatsapp_icon.png',
+              '../assets/whatsapp_icon.png',
               width: 100,
               height: 100,
             ),

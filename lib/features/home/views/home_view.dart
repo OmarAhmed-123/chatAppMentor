@@ -1,11 +1,11 @@
-// ignore_for_file: depend_on_referenced_packages
+// ignore_for_file: use_super_parameters
 
-import 'package:chatapp/core/routes/app_route.dart';
 import 'package:flutter/material.dart';
-//import 'package:flutter_chat_nectar/core/routes/app_routes.dart';
+import 'package:chatapp/core/routes/app_route.dart';
+import 'package:chatapp/features/chat/views/chat_list_view.dart';
 
 class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+  const HomeView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,12 @@ class HomeView extends StatelessWidget {
             const Text('This is the home page of your chat app.'),
             const SizedBox(height: 16),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ChatListView()),
+                );
+              },
               child: const Text('Start Chatting'),
             ),
           ],
